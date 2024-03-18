@@ -1,7 +1,6 @@
 import * as React from "react";
 import { SQLiteProvider } from "expo-sqlite/next";
-import { StatusBar } from "expo-status-bar";
-import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Text, View } from "react-native";
 import * as FileSystem from "expo-file-system";
 import { Asset } from "expo-asset";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -42,7 +41,6 @@ export default function App() {
         <Text>Loading Database...</Text>
       </View>
     );
-
   return (
     <NavigationContainer>
       <React.Suspense
@@ -69,12 +67,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
